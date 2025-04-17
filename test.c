@@ -1,15 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_test_libft.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andcardo <andcardo@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 13:41:41 by andcardo          #+#    #+#             */
-/*   Updated: 2025/04/17 17:16:54 by andcardo         ###   ########.fr       */
+/*   Created: 2025/04/17 16:57:38 by andcardo          #+#    #+#             */
+/*   Updated: 2025/04/17 17:13:50 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_isalpha(int c)
+#include <stdio.h>
+#include "libft.h"
+
+int main()
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	printf("r -> %d\n", ft_isalpha('r'));
+	printf("r -> %d\n", ft_isascii('r'));
+	printf("ç -> %d\n", ft_isascii(129));
+	printf("ó -> %d\n", ft_isascii(-12));
 }
