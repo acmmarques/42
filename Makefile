@@ -6,11 +6,12 @@
 #    By: andcardo <andcardo@student.42lisboa.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/17 14:49:08 by andcardo          #+#    #+#              #
-#    Updated: 2025/04/17 17:18:58 by andcardo         ###   ########.fr        #
+#    Updated: 2025/04/17 17:56:41 by andcardo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME=libft.a
+# Não se pode usar wildcard. É preciso especificar todos os ficheiros a serem usados.
 SRCS=$(wildcard *.c)
 OBJS=$(SRCS:.c=.o)
 CC=cc

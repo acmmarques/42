@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andcardo <andcardo@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/17 16:57:38 by andcardo          #+#    #+#             */
-/*   Updated: 2025/04/17 17:22:54 by andcardo         ###   ########.fr       */
+/*   Created: 2025/04/17 17:32:05 by andcardo          #+#    #+#             */
+/*   Updated: 2025/04/17 17:42:28 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include "libft.h"
+#include <stddef.h>
 
-int	main(void)
+size_t	ft_strlen(const char *s)
 {
-	printf("r -> %d\n", ft_isalpha('r'));
-	printf("r -> %d\n", ft_isascii('r'));
-	printf("ç -> %d\n", ft_isascii(129));
-	printf("ó -> %d\n", ft_isascii(-12));
+	int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
