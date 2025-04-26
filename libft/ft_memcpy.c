@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andcardo <andcardo@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/17 16:57:38 by andcardo          #+#    #+#             */
-/*   Updated: 2025/04/17 17:22:54 by andcardo         ###   ########.fr       */
+/*   Created: 2025/04/21 17:23:31 by andcardo          #+#    #+#             */
+/*   Updated: 2025/04/22 15:21:39 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include "libft.h"
+#include <stddef.h>
 
-int	main(void)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	printf("r -> %d\n", ft_isalpha('r'));
-	printf("r -> %d\n", ft_isascii('r'));
-	printf("ç -> %d\n", ft_isascii(129));
-	printf("ó -> %d\n", ft_isascii(-12));
+	unsigned char			*dest_ptr;
+	const unsigned char		*src_ptr;
+
+	dest_ptr = dest;
+	src_ptr = src;
+	while (n--)
+	{
+		*dest_ptr = *src_ptr;
+		dest_ptr++;
+		src_ptr++;
+	}
+	return (dest);
 }

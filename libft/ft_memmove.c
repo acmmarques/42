@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andcardo <andcardo@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/21 17:23:31 by andcardo          #+#    #+#             */
-/*   Updated: 2025/04/21 18:32:08 by andcardo         ###   ########.fr       */
+/*   Created: 2025/04/22 14:59:58 by andcardo          #+#    #+#             */
+/*   Updated: 2025/04/22 16:58:09 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stddef.h>
+#include <stdio.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void	*dest, const void *src, size_t n);
+
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*dest_ptr;
-	const char		*src_ptr;
+	unsigned char		*dest_ptr;
+	const unsigned char	*src_ptr;
 
-	dest_ptr = dest;
-	src_ptr = src;
-	while (dest_ptr && src_ptr && n > 0)
+	dest_ptr = (unsigned char *)dest;
+	src_ptr = (const unsigned char *)src;
+	if (dest > src)
 	{
-		*dest_ptr = *src_ptr;
-		dest_ptr++;
-		src_ptr++;
-		n--;
+		while (n--)
+			dest_ptr[n] = src_ptr[n];
 	}
+	else
+		ft_memcpy(dest, src, n);
 	return (dest);
 }

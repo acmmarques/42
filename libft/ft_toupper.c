@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andcardo <andcardo@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/21 16:15:14 by andcardo          #+#    #+#             */
-/*   Updated: 2025/04/21 16:32:19 by andcardo         ###   ########.fr       */
+/*   Created: 2025/04/23 15:49:13 by andcardo          #+#    #+#             */
+/*   Updated: 2025/04/23 16:07:31 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
 
-void	ft_bzero(void *s, size_t n)
+int	ft_toupper(int c)
 {
-	size_t	i;
-	char	*ptr;
-
-	i = 0;
-	ptr = s;
-	while (n > i)
-	{
-		*ptr = '\0';
-		i++;
-	}
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }
