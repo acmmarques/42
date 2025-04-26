@@ -6,12 +6,13 @@
 /*   By: andcardo <andcardo@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 12:38:30 by andcardo          #+#    #+#             */
-/*   Updated: 2025/04/23 16:09:15 by andcardo         ###   ########.fr       */
+/*   Updated: 2025/04/26 16:30:17 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stddef.h>
 
 size_t	ft_strlen(const char *s);
+//test update
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
