@@ -6,15 +6,14 @@
 /*   By: andcardo <andcardo@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 09:56:32 by andcardo          #+#    #+#             */
-/*   Updated: 2025/04/30 11:04:53 by andcardo         ###   ########.fr       */
+/*   Updated: 2025/04/30 15:57:49 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-//should this one be stactic?
-int	my_isdigit(int c)
+static int	my_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
@@ -22,8 +21,7 @@ int	my_isdigit(int c)
 		return (0);
 }
 
-//should this one be stactic?
-void	ft_add_whitespaces(const char *str, int *i)
+static void	ft_add_whitespaces(const char *str, int *i)
 {
 	while (str[*i] == ' '
 		|| (str[*i] >= 9 && str[*i] <= 13))	
