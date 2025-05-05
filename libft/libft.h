@@ -6,7 +6,7 @@
 /*   By: andcardo <andcardo@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 17:22:16 by andcardo          #+#    #+#             */
-/*   Updated: 2025/04/30 15:40:28 by andcardo         ###   ########.fr       */
+/*   Updated: 2025/05/05 14:43:17 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
+char	*ft_substr(const char *s, unsigned int size, size_t len);
 
 #endif
