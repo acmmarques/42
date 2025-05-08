@@ -6,7 +6,7 @@
 /*   By: andcardo <andcardo@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 11:10:06 by andcardo          #+#    #+#             */
-/*   Updated: 2025/04/30 15:11:32 by andcardo         ###   ########.fr       */
+/*   Updated: 2025/05/05 17:08:42 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -15,17 +15,18 @@
 
 void	ft_bzero(void *s, size_t n);
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 	size_t	total_size;
 
-	if (size == 0 || count == 0)
+	if (size == 0 || nmemb == 0)
 	{
 		ptr = malloc(1);
 		return (ptr);
 	}
-	total_size = count * size;
+	total_size = nmemb * size;
+	// checkar overflow - 2 biliões
 	ptr = (void *)malloc(total_size);
 	if (ptr == NULL)
 		return (NULL);
