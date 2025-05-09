@@ -51,10 +51,9 @@ int	ft_atoi(const char *str)
 	return (res * sign);
 }
 
-/*
-int	main(void)
+/* int	main(void)
 {
-	printf("atoi: %i\n", atoi(" \t-  90he81loo 43"));
-	printf("ft_atoi: %i\n",ft_atoi("    \t -42"));
-}
-*/
+	char *str = "\t\n -46546";
+	printf("atoi: %i\n", atoi(str));
+	printf("ft_atoi: %i\n",ft_atoi(str));
+} */
