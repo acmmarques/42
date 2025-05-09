@@ -6,34 +6,32 @@
 /*   By: andcardo <andcardo@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 11:40:13 by andcardo          #+#    #+#             */
-/*   Updated: 2025/05/08 12:32:24 by andcardo         ###   ########.fr       */
+/*   Updated: 2025/05/09 10:55:03 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 #include <stdlib.h>
 
-static char	*invert_str(const char *s, int nb_size)
-{
-	int		i;
-	char	*new_str;
 
-	i = 0;
-	new_str = (char *)malloc(sizeof(char) * (nb_size + 1));
-	while (nb_size >= 0)
+static void	fill_str_backwards(char *s, long  nb, int index)
+{
+	while (nb > 0)
 	{
-		new_str[i] = s[nb_size];
-		i++;
-		nb_size--;
+		s[index--] = nb % 10 + '0';
+		nb /= 10;
 	}
-	new_str[i] = '\0';
-	return (new_str);
 }
 
-static	int	find_nb_of_digits(int n)
+static	int	find_nb_of_digits(long n)
 {
 	int	digit_nb;
 
 	digit_nb = 1;
+	if (n < 0)
+	{
+		digit_nb += 1;
+		n *= -1;
+	}
 	while (n > 9)
 	{
 		digit_nb ++;
@@ -44,33 +42,52 @@ static	int	find_nb_of_digits(int n)
 
 char	*ft_itoa(int n)
 {
-	int		i;
 	int		digit_nb;
-	char	*inverted;
+	long	nb;
+	char	*str;
 
-	// checkar o biggest int;
-	// checkar se é negativo transformar em unsigned int;
-
-	n = (unsigned int)n;
-	i = 0;
-	printf("nb: %i\n", n);
-	digit_nb = find_nb_of_digits(n);
-	printf("nb: %i\n", digit_nb);
-	inverted = malloc(10);
-	while (n > 9)
+	nb = (long)n;
+	digit_nb = find_nb_of_digits(nb);
+	str = (char *)malloc((digit_nb + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	str[digit_nb--] = '\0';
+	if (nb == 0)
+		str[0] = '0';
+	if (nb < 0)
 	{
-		inverted[i] = n % 10 + 48;
-		n /= 10;
-		i++;
+		str[0] = '-';
+		nb *= -1;
 	}
-	inverted[i] = n % 10 + 48;
-	return (invert_str(inverted, i));
+	fill_str_backwards(str, nb, digit_nb);
+	return (str);
 }
 
+/*
 int	main(void)
 {
-	char *str = ft_itoa(-12041234);
-	printf("%s\n", str);
+	char *s;
+
+    s = ft_itoa(0);
+    printf("itoa(0) = %s\n", s);
+    free(s);
+
+    s = ft_itoa(1000034);
+    printf("itoa(1000034) = %s\n", s);
+    free(s);
+
+    s = ft_itoa(-10004);
+    printf("itoa(-10004) = %s\n", s);
+    free(s);
+
+    s = ft_itoa(2147483647);
+    printf("itoa(INT_MAX) = %s\n", s);
+    free(s);
+
+    s = ft_itoa(-2147483648);
+    printf("itoa(INT_MIN) = %s\n", s);
+    free(s);
+
+    return 0;
 }
-
-
+ */
