@@ -9,12 +9,7 @@
 /*   Updated: 2025/04/30 15:55:26 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-
-size_t	ft_strlen(const char *s1);
-size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {

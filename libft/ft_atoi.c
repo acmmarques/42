@@ -9,9 +9,7 @@
 /*   Updated: 2025/05/09 14:38:50 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 static int	my_isdigit(int c)
 {

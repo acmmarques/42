@@ -9,10 +9,7 @@
 /*   Updated: 2025/04/22 16:58:09 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
-#include <stdio.h>
-
-void	*ft_memcpy(void	*dest, const void *src, size_t n);
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

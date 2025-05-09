@@ -22,7 +22,7 @@ TEST=test.c
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	ar rcs $(NAME) $?
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -37,3 +37,5 @@ re: fclean all
 
 test: $(TEST)
 	$(CC) $(CFLAGS) $(SRCS) -g -o exec
+
+.PHONY: all re fclean clean

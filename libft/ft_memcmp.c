@@ -9,8 +9,7 @@
 /*   Updated: 2025/04/30 09:53:08 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -21,23 +20,20 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (0);
 	one = (const unsigned char *)s1;
 	two = (const unsigned char *)s2;
-	if (*one != *two)
-		return (*one - *two);
-	while (*one == *two & n > 0)
+	while (n > 1 && *one == *two)
 	{
 		one++;
 		two++;
 		n--;
-		if (*one != *two && n > 0)
-			return (*one - *two);
 	}
-	return (0);
+	return (*one - *two);
 }
 
 /*
+
 int	main(void)
 {
-	int c = ft_memcmp("", "test", 4);
+	int c = ft_memcmp("hf", "hx", 1);
 	printf("c: %d\n", c);
 }
-*/
+	*/

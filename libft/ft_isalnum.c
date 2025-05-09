@@ -9,9 +9,7 @@
 /*   Updated: 2025/04/17 16:50:10 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_isdigit(int c);
-int	ft_isalpha(int c);
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

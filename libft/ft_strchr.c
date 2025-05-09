@@ -6,10 +6,10 @@
 /*   By: andcardo <andcardo@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 16:12:28 by andcardo          #+#    #+#             */
-/*   Updated: 2025/04/23 16:22:38 by andcardo         ###   ########.fr       */
+/*   Updated: 2025/05/09 15:11:56 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -38,4 +38,3 @@ int	main (void)
 	printf("%p\n", (d));
 }
  */
-

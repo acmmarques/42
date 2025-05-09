@@ -9,13 +9,7 @@
 /*   Updated: 2025/05/07 14:18:35 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+#include "libft.h"
 
 static char	*find_start(char const *s1, char const *set)
 {

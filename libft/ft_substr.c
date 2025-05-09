@@ -9,38 +9,20 @@
 /*   Updated: 2025/05/05 16:16:44 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
-#include <stdio.h>
-
-int		ft_strlen(const char *s);
+#include "libft.h"
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char			*substr_ptr;
-	unsigned int	i;
 
-	if (start >= (unsigned int)ft_strlen(s))
-	{
-		substr_ptr = (char *)malloc(sizeof(char) * 1);
-		if (substr_ptr == NULL)
-			return (NULL);
-		substr_ptr[0] = '\0';
-		return (substr_ptr);
-	}
+	if (!s || len == 0 || start >= (unsigned int)ft_strlen(s))
+		return (ft_calloc(1, 1));
 	if (len > (unsigned long)ft_strlen(s + start))
 		len = ft_strlen(s + start);
 	substr_ptr = (char *)malloc(sizeof(char) * (len + 1));
 	if (substr_ptr == NULL)
 		return (NULL);
-	i = 0;
-	while (len > 0 && s[start + i] != '\0')
-	{
-		substr_ptr[i] = s[start + i];
-		i++;
-		len--;
-	}
-	substr_ptr[i] = '\0';
+	ft_strlcpy(substr_ptr, s + start, len + 1);
 	return (substr_ptr);
 }
 

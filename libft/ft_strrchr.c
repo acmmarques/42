@@ -6,20 +6,16 @@
 /*   By: andcardo <andcardo@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 12:19:17 by andcardo          #+#    #+#             */
-/*   Updated: 2025/04/27 13:43:20 by andcardo         ###   ########.fr       */
+/*   Updated: 2025/05/09 15:13:08 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
-#include <string.h>
-#include <stdio.h>
-
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t	len;
-	c = (char)c;
 
+	c = (char)c;
 	len = ft_strlen(s);
 	if (s[len] == '\0' && c == '\0')
 		return ((char *)&(s[len]));
@@ -29,7 +25,7 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)&(s[len - 1]));
 		len--;
 	}
-	return ((char *)NULL);
+	return ((char *) NULL);
 }
 
 /*

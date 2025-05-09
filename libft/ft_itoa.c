@@ -6,14 +6,12 @@
 /*   By: andcardo <andcardo@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 11:40:13 by andcardo          #+#    #+#             */
-/*   Updated: 2025/05/09 10:55:03 by andcardo         ###   ########.fr       */
+/*   Updated: 2025/05/09 15:14:04 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-
-static void	fill_str_backwards(char *s, long  nb, int index)
+static void	fill_str_backwards(char *s, long nb, int index)
 {
 	while (nb > 0)
 	{

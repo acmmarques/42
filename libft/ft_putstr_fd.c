@@ -6,15 +6,15 @@
 /*   By: andcardo <andcardo@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 11:03:29 by andcardo          #+#    #+#             */
-/*   Updated: 2025/05/09 11:08:36 by andcardo         ###   ########.fr       */
+/*   Updated: 2025/05/09 15:15:15 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (!s)	
-		return;
+	if (!s)
+		return ;
 	while (*s)
 		write(fd, s++, 1);
 }
