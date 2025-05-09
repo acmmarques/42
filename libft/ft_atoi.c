@@ -6,7 +6,7 @@
 /*   By: andcardo <andcardo@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 09:56:32 by andcardo          #+#    #+#             */
-/*   Updated: 2025/04/30 15:57:49 by andcardo         ###   ########.fr       */
+/*   Updated: 2025/05/09 14:38:50 by andcardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	my_isdigit(int c)
 static void	ft_add_whitespaces(const char *str, int *i)
 {
 	while (str[*i] == ' '
-		|| (str[*i] >= 9 && str[*i] <= 13))	
+		|| (str[*i] >= 9 && str[*i] <= 13))
 		(*i)++;
 }
 
@@ -33,7 +33,7 @@ int	ft_atoi(const char *str)
 	int	i;
 	int	sign;
 	int	res;
-	
+
 	sign = 1;
 	i = 0;
 	ft_add_whitespaces(str, &i);
